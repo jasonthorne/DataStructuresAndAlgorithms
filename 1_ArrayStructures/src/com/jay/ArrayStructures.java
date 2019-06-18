@@ -71,14 +71,48 @@ public class ArrayStructures {
 		
 		if(arraySize < 50) { //keep array sise below 50 (the max assigned amount)
 			
-			theArray[arraySize] = value; //add the value to the end of the array (because of 0 indexing this will target the first empty element)
+			theArray[arraySize] = value; //add the value to the end of the "virtual" array (because of 0 indexing this will target the first empty element)
 			
 			arraySize++; //add to the variable holding the size of the array 
 		}
 	}
 	
 	//----------------------------------------
+	
+	//*******************LINEAR SEARCH *********************
+	//searches through ALL elements of the array to find ALL instances of a target value
+	
+	public String linearSearchForValue(int targetValue) {
 		
+		boolean valueInArray = false;
+		
+		String indexesWithValue = "The value '" + targetValue + "' was found in the following indexes: ";
+		
+		//System.out.println("The value was found in the following indexes: ");
+		
+		for(int i=0;i<arraySize;i++) {
+			
+			if(theArray[i] == targetValue) {
+				valueInArray = true;
+				
+				//System.out.println(i + " ");
+				
+				indexesWithValue += i + ", ";
+			}
+		}//for
+		
+		if(!valueInArray) { //if value wasn't found in array
+			indexesWithValue  += "none";
+			///System.out.println(indexesWithValue);
+		}
+		
+		return indexesWithValue;
+	}
+	
+	//----------------------------------------
+	
+	//MAIN:
+	
 	public static void main(String[] args) {
 		
 		//create an array:
@@ -102,10 +136,8 @@ public class ArrayStructures {
 		newArray.insertValue(33);
 		newArray.printArray(); //print new array to show added value
 		
-		//----------------------------------------
-		
-		
-		
+		//linear search array for target values:
+		System.out.println(newArray.linearSearchForValue(12));
 		
 	}
 
