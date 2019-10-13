@@ -1,2 +1,7 @@
 Measure the time taken by a function:
 https://www.geeksforgeeks.org/measure-time-taken-function-java/
+
+merge Sort:
+https://howtodoinjava.com/algorithm/merge-sort-java-example/
+
+23rd/24h oct - info session.
