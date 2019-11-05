@@ -10,23 +10,20 @@ public class Main {
 		long startTime = 0L;
 		long endTime = 0L;
 		
-		//===========================================================================
+		//==========================================================================
 		//	LINEAR SEARCH:	
 		
 		System.out.println("========================\nLINEAR SEARCH:");
 		
 		int [] linearList = {2, 56, 43, 32, 78, 1};
 		int linearTarget = 1;
-		boolean foundLinearTarget = false;
 		System.out.println("Target to find: " + linearTarget);
 		
 		//starting time: 
 		startTime = System.nanoTime();
 		
 		for (int i=0; i< linearList.length; i++) {
-			
 			if (linearList[i] == linearTarget) {
-				foundLinearTarget = true;
 				System.out.println("Found target: " + linearList[i]);
 				break;
 			}
