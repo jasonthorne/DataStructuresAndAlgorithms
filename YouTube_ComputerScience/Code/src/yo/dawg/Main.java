@@ -270,7 +270,6 @@ public class Main {
 	    */
 	    //=====================
 	    
-	   
 	    while(ptr1 != mergeMiddlePos) { //stop when ptr hits middle pos of list.
 	    	
 	    	leftMergeList[ptr1] = mergeList[ptr1]; //use ptr1 to copy elements from first half of source array into left array
